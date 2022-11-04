@@ -73,8 +73,8 @@ object G {
 object Traversal {
   import scala.collection.mutable.ArraySeq
   import G._
-  type Traversal[T] = (Graph, Vertex, OnVisit) => T
   type OnVisit = Vertex => Unit
+  type Traversal[T] = (Graph, Vertex, OnVisit) => T
 
   // グラフgの頂点sからの深さ優先探索（再帰）
   def depth_first_rec: Traversal[Unit] =
